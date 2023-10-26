@@ -1,262 +1,130 @@
-<!DOCTYPE html> <!-- 문서유형 -->
-<html>
-    <head>
-        <title>~장소현의 홈페이지~</title>
-        <meta charset="utf-8" /> <!-- utf-8, euc-kr -->
-        <meta name="keywords" content="웹퍼블리싱, 계원, html, css" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <style>
-            body{
-                color: brown;
-                
-            }
-        </style>
-    </head>
-    <body> <!-- 본문 -->
-        <a style="color: pink;" href="sub2.html" target="_blank">서브페이지!!</a>
-        <a href="http://www.naver.com">네이버</a>
-        <a href="https://cafe.naver.com/kwdmd" target="_blank">계원디미디카페</a>
-        <a href="https://blog.naver.com/ssohyni" target="_blank">소현이블로그</a>
-        <a href="https://www.youtube.com/" target="_blank">유튜브</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+    <style>
+        body { 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'NewFont', sans-serif;
+            color: rgb(255, 240, 240);
+            background-color: rgb(255, 240, 240); /* 배경색 */
+        }
 
-        <img width="300px" height="auto" src="https://i.pinimg.com/736x/f6/e5/45/f6e545756ce939b84acd71dcee0a05d0.jpg" />
-        <img width="300px" height="auto" src="image/sigolddonggae.jpg" />
+        header {
+            background-color: transparent;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
 
-        <a href="http://www.naver.com">
-            <img width="300px" height="auto" src="https://i.pinimg.com/736x/f6/e5/45/f6e545756ce939b84acd71dcee0a05d0.jpg" />
-        </a>
-        
-        <시작태그>
-        </종료태그>
-        <독립형태그 />
+        h1 {
+            margin: 0;
+            flex-grow: 1;
+        }
 
-        <시작태그 속성="값">내용</종료태그>
-        <독립형태그 속성="값" />
+        .date-time {
+            margin-right: 20px;
+            color: rgb(255, 136, 164);
+            font-weight: bold;
+        }
 
-        <!-- h1 ~ h6 -->
-        <h1>대한민국</h1>
-            <h2>서울특별시</h2>
-                <h3>영등포구</h3>
-            <h2>경기도</h2>
-                <h3>의왕시</h3>
-                <h3>안양시</h3>
-        <hr />
-        <h1>미국</h1>
-        <h1>일본</h1>
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
 
-        <p>
-            단어가 모여서 문장, 문장이 모여서 문단
-            한 가지 주제를 가지고 있는 문장의 집합
-        </p>
+        .nav-link {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(218, 207, 210); /* 기본 텍스트 색상 변경 */
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* 애니메이션 추가 */
+        }
 
-        HTML은         띄어쓰기, 
-        <br /> 줄바꿈을 무시한다
+        .nav-link:hover {
+            transform: scale(1.1);
+            color: rgb(255, 136, 164); /* 호버시 텍스트 색상 변경 */
+        }
 
-        <hr />
-
-        <strong>강한 강조</strong>
-        <em>강조</em>
-        <!-- 의미를 부여함 ( 사용 권장 ) -->
-
-        <b>굵은 글씨</b>
-        <i>기울임 (이텔릭체)</i>
-        <!-- 모양을 부여함 ( 사용 비권장 ) -->
-
-        <ins>추가 글</ins>
-        <del>삭제 글</del>
-        <!-- 의미를 부여 -->
-
-        <u>밑 줄</u>
-        <strike>가운데 줄</strike>
-        <!-- 모양을 부여 -->
-
-        윗첨자<sup>추가되는 설명을 위에 표시</sup>
-        아랫첨자<sub>추가되는 설명을 아래에 표시</sub>
-
-        <ul>
-            <li>리스트1</li>
-            <li>리스트2</li>
-            <li>리스트3</li>
-        </ul>
-        <ol>
-            <li>리스트1</li>
-            <li>리스트2</li>
-            <li>리스트3</li>
-        </ol>
-        <dl>
-            <dt>용어</dt>
-            <dd>용어에 대한 설명</dd>
-            <dt>HTML</dt>
-            <dd>Hyper Text Markup Language</dd>
-        </dl>
-
-        <style>
-            th, td{
-                border: solid 1px black;
-            }
-        </style>
-
-        <table summary="table 기초">
-            <caption>테이블 기초</caption>
-            <tr> <!-- row 행 , 줄 -->
-                <th scope="col" rowspan="2">제목1</th> <!-- table header -->
-                <th scope="col" colspan="2">제목2</th> <!-- colum 열 , 칸 -->
-                <th scope="col">제목3</th>
-            </tr> 
-            <tr>
-                <td>내용1</td>
-                <td>내용2</td>
-                <td>내용3</td>
-            </tr>
-            <thead>표제목</thead>
-            <tbody>표본문</tbody>
-            <tfoot>표끝</tfoot>
-        </table>
-
-        <div>블록(block)형 구획 나누기</div>
-        <span>인라인(inline)형 구획 나누기</span>
-        <!-- 의미 없이 사용하기 좋은 태그 -->
-
-        <form>
-            <lable for="name_1">아이디</lable>
-            <input name="name_1" type="text" placeholder="-기호없이 숫자만 입력" />
-            <input type="password" />
-
-            <input type="radio" name="p1" checked/>사과
-            <input type="radio" name="p1" />배
-            <input type="radio" name="p1" />딸기
-
-            <input type="radio" name="p2" checked/>가을
-            <input type="radio" name="p2" />겨울
-            <input type="radio" name="p2" />봄
-
-            <input type="checkbox" />봄
-            <input type="checkbox" />여름
-            <input type="checkbox" />가을
-            <input type="checkbox" />겨울
-
-            <select> <!-- select box, combo box -->
-                <option>네이버</option>
-                <option>구글</option>
-                <option>계원</option>
-            </select>
-
-            <textarea rows="10" cols="60">내용</textarea> 
-
-            <input onclick="alert('버튼클릭');" type="button" value="버튼입니다" />
-            <button>
-                <strong>
-                    <del>
-                        버튼입니다
-                    </del>
-                </strong>
-            </button>
-
-            <input type="submit" value="제출" />
-        </form>
-
-        <section> <!-- 같은 주제를 가지고 있는 내용의 모임 -->
-            <h1>구획1 제목</h1>
-            구획1 내용
-        </section>
-
-        <nav> <!-- 네비게이션, 페이지 이동 버튼 모임 -->
-            <ul>
-            <li><a href="링크주소">링크버튼</a></li>
-            </ul>
-            <a href="링크주소">링크버튼</a></li>
-        </nav>
-
-        <article> <!-- 연관성이 다소 적은 내용의 모임 -->
-            <h1>기사 제목</h1>
-            기사 내용
-        </article>
-
-        <aside> <!-- 연관성이 아예 없는 내용의 모임 -->
-            <h1>광고 제목</h1>
-            광고 내용
-        </aside>
-
-        <header></header> <!-- 본문(body)내의 서론 -->
-        <footer></footer> <!-- 본문(body)내의 결론 -->
-
-        <canvas id="myCanvas"></canvas>
-        <script>
-            var canvas = document.getElementById("myCanvas");
-            //get element by id
-            //id 기준으로 요소 가져오기
-            var ctx = canvas.getContext("2d");
-            ctx.fillStyle = "#ff0000";
-            ctx.fillRect(25, 25, 100, 100); //채움 사각형
-            ctx.clearRect(45, 45, 60, 60); //사각형태로 지우기
-            ctx.strokeRect(50, 50, 50, 50); //윤곽 사각형
+        a.main-text {
+            text-decoration: none;
+            font-size: 80px;
+            font-weight: bold; 
+            margin-bottom: 20px;
+            display: block;
+            color: rgb(255, 136, 164);
             
-            ctx.fillStyle = "#000000";
-            ctx.beginPath(); //선그리기 시작
-            ctx.moveTo(65, 75); //펜 들어 움직이기
-            ctx.lineTo(90, 95); //선 그으며 움직이기
-            ctx.lineTo(90, 55);
-            ctx.fill(); //내부 채우기
-            
-            ctx.beginPath();
-            ctx.arc(225, 75, 50, 0, Math.PI * 2, true); // Outer circle 
-            ctx.moveTo(260, 75);
-            ctx.arc(225, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
-            ctx.moveTo(215, 65);
-            ctx.arc(210, 65, 5, 0, Math.PI * 2, true);  // Left eye
-            ctx.moveTo(245, 65);
-            ctx.arc(240, 65, 5, 0, Math.PI * 2, true);  // Right eye
-            ctx.stroke();
-        </script>
+        }
 
-        <audio controls autoplay mute>
-            <source src="file_example_MP3_700KB.mp3" type="audio/mpeg" />
-        </audio>
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
 
-        <video width="320" height="240" controls>
-            <source src="file_example_MP4_480_1_5MG.mp4" type="video/mp4" />
-          </video>
+        /* 추가된 스타일: 네비게이션 메뉴 스타일 */
+        nav {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
 
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/sl7ih5rLfYM?si=SXLXn5QPQ2jxxx5s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
-          <table summary="table 기초">
-            <caption>리틀 포레스트의 사계절을 담은 음식</caption>
-            
-            <tr> <!-- row 행 , 줄 -->
-                <th scope="col" rowspan="2">요리 모음</th> <!-- table header -->
-                <th scope="col" colspan="1">봄(春)</th> <!-- colum 열 , 칸 -->
-                <th scope="col" colspan="1">여름(夏)</th>
-                <th scope="col" colspan="1">가을(秋)</th>
-                <th scope="col" colspan="1">겨울(冬)</th>
-            </tr> 
+        nav a {
+            text-decoration: none;
+            color: rgb(255, 0, 64);
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* 애니메이션 추가 */
+        }
 
-            <tr>
-                <td>· 꽃 파스타 <br/>
-                    · 양배추 빈대떡<br/> 
-                    · 양배추 샌드위치
-                </td>
+        nav a:hover {
+            transform: scale(1.1);
+            color: white; /* 호버시 텍스트 색상 변경 */
+        }
 
-                <td>· 오이콩국수<br/>
-                    · 아카시아꽃 튀김<br/>
-                </td>
+        /* 추가된 스타일: 각 메뉴에 대한 클래스와 애니메이션 설정 */
+        .menu-item {
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
 
-                <td>· 밤조림<br/>
-                    · 곶감<br/>
-                    · 양파 그라탕<br/>
-                    · 감자빵 <br/>
-                    · 크렘브륄레
-                </td>
+        .menu-item:hover {
+            transform: scale(1.1);
+            color: rgb(255, 136, 164); /* 호버시 텍스트 색상 변경 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-links">
+        </div>
+        <div class="date-time" id="date-time"></div>
+    </header>
+    <a href="#" class="main-text">INDEX</a>
 
-                <td>· 얼큰 수제비 <br/>
-                    · 배추전<br/>
-                    · 식혜 <br/>
-                    · 배추 된장국<br/>
-                    · 삼색 시루떡 <br/>
-                    · 막걸리
-                </td>
-            </tr>
-        </table>
+    <!-- 추가된 내용: 네비게이션 메뉴 -->
+    <nav>
+        <a href="html.html" class="nav-link menu-item">html</a>
+        <a href="css.html" class="nav-link menu-item">css</a>
+        <a href="sub2.html" class="nav-link menu-item">중간평가</a>
+        <a href="layout1/layout1.html" class="nav-link menu-item">layout1</a>
+        <a href="layout2/layout2.html" class="nav-link menu-item">layout2</a>
+        <a href="layout3/layout3.html" class="nav-link menu-item">layout3</a>
+        <a href="last.html" class="nav-link menu-item">PORTFOLIO</a>
+    </nav>
 
-        <p style="color:rgb(222, 123, 161);"><h3>~봄(春)의 꽃내음 가득한 꽃 파스타 만들기~</h3></p>
-    </body>
+
+</body>
 </html>
-
